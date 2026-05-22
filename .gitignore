@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Claude local settings (personal paths)
+.claude/settings.local.json
+
+# Personal emotional model data
+.claude/skills/emotional-modeling/memory/
+
+# Obsidian vault (personal data)
+# The vault is stored at /Users/jiefwang/Documents/Obsidian Vault/
+# This repo only contains the framework, not the actual model content
