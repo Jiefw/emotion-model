@@ -123,9 +123,28 @@ emotional-wiki/
 
 ### 5. （可选）通过微信对话
 
-配置微信桥接后，你可以在微信中与 Claude Code 对话。对话内容同样会被记录到 wiki 中。这意味着——
+配置微信桥接后，你可以在微信中与 Claude Code 对话。对话内容同样会被记录到 wiki 中。
 
-> 你在散步时忽然想起一件事，在微信上发一条语音，它会被听到、被理解、被记录到你的模型里。不需要打开电脑，不需要特意留出时间。
+这意味着你在散步时忽然想起一件事，在微信上发一条消息，它会被理解、被记录到你的模型里。不需要打开电脑，不需要特意留出时间。
+
+**快速安装：**
+
+```bash
+bash scripts/setup-wechat.sh
+```
+
+或者手动操作：
+
+```bash
+git clone https://github.com/Wechat-ggGitHub/wechat-claude-code.git ~/.claude/skills/wechat-claude-code
+cd ~/.claude/skills/wechat-claude-code
+npm install && npm run build
+```
+
+启动后扫码登录微信即可。
+
+> 微信桥接使用 [wechat-claude-code](https://github.com/Wechat-ggGitHub/wechat-claude-code) 项目（MIT License）。
+> 配置脚本和说明见 [`scripts/`](./scripts/) 目录。
 
 ---
 
@@ -204,6 +223,8 @@ visual/ 目录下会有 Excalidraw 绘制的模式图，类似：
 |------|------|
 | `CLAUDE.md` | 角色定义、对话风格、五维度框架、Wiki 维护规范 |
 | `.claude/skills/emotional-modeling/SKILL.md` | 后台建模 observer 的具体行为定义 |
+| `scripts/wechat-skill-reference.md` | 微信桥接 skill 参考 |
+| `scripts/setup-wechat.sh` | 微信桥接一键安装脚本 |
 
 将 `CLAUDE.md` 放入项目根目录后即生效，无需额外配置。
 
